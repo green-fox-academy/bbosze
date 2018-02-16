@@ -222,3 +222,73 @@ for (let i: number = 0; i < lineCount; i++) {
           tree += '**';
 }
 */
+
+/*
+let lineCount: number = 6;
+let tree: string = '*';
+let space: string = ' ';
+
+for (let i: number = 0; i < lineCount; i++) {
+  space = '';
+  tree = '*';
+    if (i <= 0){
+    for (let j: number = lineCount/2; j < lineCount; j++) {
+      space += ' ';
+    }
+    }
+   else if (i <= (lineCount) /2 ) {
+    for (let k: number = 1; k <= lineCount / 2 - i; k++) {
+    space += ' ';
+
+      }
+    for (let l: number = i; l > 0; l--) {
+    tree += '**';
+        }
+   }
+   else {
+     for (let m: number = i; m < lineCount  ; m++) {
+       tree += '**';
+     }
+     for (let n: number = 0; n > lineCount / 2-i ; n--) {
+       space += ' ';
+     }
+   }
+  console.log(space + tree)
+     }
+*/
+
+let lineCount: number = 10;
+let tree: string = '*';
+let space: string = ' ';
+
+if (lineCount % 2 !== 0) {
+  console.log('It is not working yet, please choose an even number!')
+} else {
+for (let i: number = 0; i < lineCount; i++) {
+  space = '';
+  tree = '*';
+    if (i <= 0){
+    for (let j: number = 2 ; j <= lineCount/2 + 1; j++) {
+      space += ' ';
+    }
+    }
+   else if (i <= (lineCount) /2 ) {
+    for (let k: number = 1; k <= lineCount / 2 - i; k++) {
+    space += ' ';
+
+      }
+    for (let l: number = i; l > 0; l--) {
+    tree += '**';
+        }
+   }
+   else {
+     for (let m: number = i; m < lineCount  ; m++) {
+       tree += '**';
+     }
+     for (let n: number = 0; n > lineCount / 2-i ; n--) {
+       space += ' ';
+     }
+   }
+  console.log(space + tree)
+     }
+}
