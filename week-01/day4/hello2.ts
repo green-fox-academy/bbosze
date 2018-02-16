@@ -1,4 +1,4 @@
-let lineCount: number = 11;
+let lineCount: number = 9;
 let tree: string = '*';
 let space: string = ' ';
 
@@ -20,14 +20,14 @@ for (let i: number = 0; i < lineCount; i++) {
     tree += '**';
         }
    }
-   else if (i <= lineCount - 1){
+   else
      for (let m: number = i; m < lineCount-1   ; m++) {
        tree += '**';
      }
      for (let n: number = 0; n > lineCount / 2-i ; n--) {
        space += ' ';
      }
-   }
+
 
   console.log(space + tree)
      }
