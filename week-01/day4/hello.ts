@@ -257,7 +257,7 @@ for (let i: number = 0; i < lineCount; i++) {
      }
 */
 
-let lineCount: number = 10;
+let lineCount: number = 6;
 let tree: string = '*';
 let space: string = ' ';
 
