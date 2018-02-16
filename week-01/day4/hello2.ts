@@ -1,3 +1,8 @@
+'use strict';
+
+//DIAMOND
+
+/*
 let lineCount: number = 9;
 let tree: string = '*';
 let space: string = ' ';
@@ -31,3 +36,22 @@ for (let i: number = 0; i < lineCount; i++) {
 
   console.log(space + tree)
      }
+*/
+
+//SQUARE
+
+let lineCount: number = 4;
+let line: string = '%'
+let space: string = '   '
+
+for (let i: number = 1; i <= lineCount; i++) {
+  if (i <= 1) {
+    console.log(line + line + line + line + line);
+  }
+  else if (i < lineCount){
+    console.log(line + space + line);
+  }
+  else {
+    console.log(line + line + line + line + line);
+  }
+}
