@@ -5,6 +5,6 @@
 <h2>Stuff you can find here:</h2>
 <ul
 <li><a href='https://github.com/greenfox-academy/bbosze'>My Greenfox repo<a><li>
-<li>>My Greenfox repo<li>
+<li><a href='https://bbosze.github.io/'>My custom page<a><li><li>
 </ul>
 <body>
