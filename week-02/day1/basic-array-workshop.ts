@@ -193,8 +193,7 @@ console.log(colors[2])
 // -  Create a variable named `ai` with the following content: `[3, 4, 5, 6, 7]`
 // -  Log the sum of the elements in `ai` to the console
 
+
 let ai:number[] = [3,4,5,6,7];
-ai.forEach(function(element, index){
-  
-}
-)
+let reducer = (accumulator, currentValue) => accumulator + currentValue;
+console.log(ai.reduce(reducer));
