@@ -85,6 +85,13 @@ for (let i:number = abc.length; i > 0; i--) {
   }
 }
 console.log(abc)
+
+*/
+//WHITH REVERSE
+/*
+let abc:string[] = ['Artur', 'Boe', 'Chloe', 'Zoe']
+let cba:string[] = abc.reverse();
+console.log("Reversed array is : " + abc );
 */
 
 // PRINT ALL
@@ -154,6 +161,13 @@ nimals.forEach(function(element, index){
 console.log(nimals);
 */
 
+/*
+let nimals:string[] = ['kuty', 'cic', 'macsk']
+console.log(nimals.map(item => item + 'a'));
+*/
+
+
+
 //DOUBLE ITEMS
 // -  Create an array variable named `names` with the following content: `['Gin', 'Whiskey', 'Wine', 'Beer']`
 // -  Double all the strings in the array, use a built in array method instead of a loop
@@ -193,7 +207,8 @@ console.log(colors[2])
 // -  Create a variable named `ai` with the following content: `[3, 4, 5, 6, 7]`
 // -  Log the sum of the elements in `ai` to the console
 
-
+/*
 let ai:number[] = [3,4,5,6,7];
 let reducer = (accumulator, currentValue) => accumulator + currentValue;
 console.log(ai.reduce(reducer));
+*/
