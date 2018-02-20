@@ -11,7 +11,7 @@ let godList: string[] = ['Zeus', 'Venus', 'Apollo', 'Hermes', 'Artemis', 'Apollo
 
 //planetList.push('Saturn');
 
-function putSaturn(planetList) {
+function putSaturn(planetList: string[]) {
   if (planetList.length === 7) {
     planetList.push('Saturn');
   }
@@ -25,4 +25,4 @@ console.log(godList);
 
 console.log(putSaturn(planetList));
 
-//export = putSaturn;
+export = putSaturn;
