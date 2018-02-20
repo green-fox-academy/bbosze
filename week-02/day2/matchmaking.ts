@@ -23,7 +23,7 @@ function makingMatches(boys: string[], girls: string[], matches: string[]) {
   }
   else if (boys.length > girls.length || boys.length < girls.length){
     for (let i: number = 0; i < boysandgirls.length-3; i++) {
-                                          //WHY -2???
+                                          //WHY -3???
       if (i % 2 === 0) {
         matches.push(girls[1]);
         girls.shift();
