@@ -13,7 +13,7 @@ console.log(splitted)
 let reversedString: string = '.eslaf eb t\'ndluow ecnetnes siht ,dehctiws erew eslaf dna eurt fo sgninaem eht fI';
 
 let splittedArray = reversedString.split('');
-console.log(splittedArray);
+
 
 let reversedArray = splittedArray.reverse();
 
