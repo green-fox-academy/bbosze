@@ -30,12 +30,10 @@ candyCounter(students);
 
 function candyAverage(blah: any[]) {
   let numberOfCandies: number = 0;
-  let averageCandy: number = 0;
-  for (let i: number = 0; i < blah.length; i++) {
+    for (let i: number = 0; i < blah.length; i++) {
     numberOfCandies += students[i].candies;
-    averageCandy = numberOfCandies / blah.length;
-    }
-    return averageCandy
+        }
+    return numberOfCandies / blah.length;
 }
 
 console.log(candyAverage(students));
