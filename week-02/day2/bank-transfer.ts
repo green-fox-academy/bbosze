@@ -1,48 +1,37 @@
 'use strict';
 
 let accounts: any[] = [
-  { client_name: 'Igor', account_number: 11234543, balance: 203004099.2 },
-  { client_name: 'Vladimir', account_number: 43546731, balance: 5204100071.23 },
-  { client_name: 'Sergei', account_number: 23456311, balance: 1353600.0 }
+  { client_name: 'Igor', account_number: 11234543, balance: 5000 },
+  { client_name: 'Vladimir', account_number: 43546731, balance: 4000 },
+  { client_name: 'Sergei', account_number: 23456311, balance: 3000 }
 ];
 
-// Create function that returns the name and balance of cash on an account in a list
-// The output should be: "Igor", "203004099.2"
 
-let nameAndBalance: string[] = [];
+//FULLY WORKING TRANSFER FUNCTION
 
-
-function getNameAndBalance(obj: any[]) {
-  for(let i: number = 0; i < obj.length; i++) {
-    nameAndBalance.push(obj[i].client_name);
-    nameAndBalance.push(obj[i].balance);
+function transfer(database:any[], accountFrom:string, accountTo:string, amount:number) {
+  let checkArray: string[] = [];
+  for (let i:number = 0; i < database.length; i++) {
+    if (database[i].client_name === accountFrom) {
+      checkArray.push('a')} }
+  for (let i:number = 0; i < database.length; i++) {
+    if (database[i].client_name === accountTo){
+      checkArray.push('b')
+      }}
+    if (checkArray.length === 2){
+    for (let i:number = 0; i < database.length; i++) {
+      if (database[i].client_name === accountFrom) {
+        database[i].balance -= amount;
+        console.log(database[i].client_name, database[i].account_number, database[i].balance)
+      } }
+      for (let i:number = 0; i < database.length; i++) {
+        if (database[i].client_name === accountTo) {
+        database[i].balance += amount;
+        console.log(database[i].client_name, database[i].account_number, database[i].balance)
+    }}}
+    else {
+      console.log('404 - account not found')
+    }
   }
-return nameAndBalance;
-}
 
-
-console.log(getNameAndBalance(accounts));
-
-
-
-// Create function that transfers an amount of cash from one account to another
-// it should have four parameters:
-//  - the accounts
-//  - from account_number
-//  - to account_number
-//  - amount of cash to transfer
-//
-// Log "404 - account not found" if any of the account numbers don't exist to the console.
-// transferAmount(accounts, 43546731, 23456311, 500.0);
-//After printing the "accounts" it should look like:
-// var accounts = [
-//	{ 'client_name': 'Igor', 'account_number': 11234543, 'balance': 203004099.2 },
-//	{ 'client_name': 'Vladimir', 'account_number': 43546731, 'balance': 5204099571.23 },
-//	{ 'client_name': 'Sergei', 'account_number': 23456311, 'balance': 1354100.0 }
-//]
-/*export = {
-  getNameAndBalance,
-  transferAmount,
-  accounts
-};
-*/
+transfer(accounts, 'Sergei', 'Igor', 1000);
