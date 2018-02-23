@@ -18,18 +18,18 @@ function transfer(database:any[], accountFrom:string, accountTo:string, amount:n
     if (database[i].client_name === accountTo){
       checkArray.push('b')
       }}
-    if (checkArray.length === 2){
+  if (checkArray.length === 2){
     for (let i:number = 0; i < database.length; i++) {
       if (database[i].client_name === accountFrom) {
         database[i].balance -= amount;
         console.log(database[i].client_name, database[i].account_number, database[i].balance)
       } }
-      for (let i:number = 0; i < database.length; i++) {
+    for (let i:number = 0; i < database.length; i++) {
         if (database[i].client_name === accountTo) {
         database[i].balance += amount;
         console.log(database[i].client_name, database[i].account_number, database[i].balance)
     }}}
-    else {
+  else {
       console.log('404 - account not found')
     }
   }

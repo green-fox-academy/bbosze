@@ -1,0 +1,84 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(211,211,211);
+}
+
+.articlecontent,
+.sidebar,
+.gallery ul li {
+  color: white;
+  font-size: 30px;
+}
+
+.social-item {
+  margin-left: 30px;
+}
+
+.gallery ul li {
+  width: 300px;
+  height: 200px;
+  background-color: purple;
+  margin: 20px;
+  display: block;
+}
+
+.menu ul li {
+  margin-right: 30px;
+}
+
+.gallery {
+  background: pink;
+}
+
+.navi {
+  height: 70px;
+  width: 100%;
+  font-size: 25px;
+  background-color: yellow;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu ul, .social {
+  display: flex;
+}
+
+.menu ul {
+  flex-direction: row-reverse;
+}
+
+.maincontent {
+display: flex
+}
+
+.articlecontent {
+  background-color: green;
+  height: 100%;
+  flex: 2;
+
+}
+
+.sidebar {
+  background-color: blue;
+  height: 100%;
+  flex: 1;
+}
+
+
+.gallery ul {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gallery ul li:first-child {
+  order: 2;
+}
+
+.gallery ul li:last-child {
+  order: -1;
+}
