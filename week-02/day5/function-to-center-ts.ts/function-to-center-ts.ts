@@ -10,10 +10,6 @@ const ctx = canvas.getContext('2d');
 // Fill the canvas with lines from the edges, every 20 px, to the center.
 
 
-
-let cord:number[] = [10, 10];
-
-
 function toCenter(grow)  {
   let a: number = 0;
   let b:number = 0;

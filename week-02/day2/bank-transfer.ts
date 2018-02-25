@@ -1,13 +1,15 @@
 'use strict';
 
 let accounts: any[] = [
-  { client_name: 'Igor', account_number: 11234543, balance: 5000 },
+  { client_name: 'Ivor', account_number: 11234543, balance: 5000 },
   { client_name: 'Vladimir', account_number: 43546731, balance: 4000 },
   { client_name: 'Sergei', account_number: 23456311, balance: 3000 }
 ];
 
 
 //FULLY WORKING TRANSFER FUNCTION
+
+console.log(accounts)
 
 function transfer(database:any[], accountFrom:string, accountTo:string, amount:number) {
   let checkArray: string[] = [];
@@ -35,3 +37,5 @@ function transfer(database:any[], accountFrom:string, accountTo:string, amount:n
   }
 
 transfer(accounts, 'Sergei', 'Igor', 1000);
+
+console.log (accounts);

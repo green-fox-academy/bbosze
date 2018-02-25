@@ -28,7 +28,6 @@ for (let i:number = 0; i < num; i++) {
   drawLine(w, y, x, 0);
 }
 
-
 function drawLine(x1, y1, x2, y2) {
   ctx.beginPath();
   ctx.strokeStyle = 'red';
