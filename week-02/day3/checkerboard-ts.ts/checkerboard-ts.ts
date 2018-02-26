@@ -37,7 +37,6 @@ drawSquare(20, 'red');
 
 let checkerBoard:[number, string, string] = [20, 'red', 'gold'];
 
-
 function drawSquare(checkerBoardData: any[]) {
   let x: number = checkerBoardData[0];
   let y: number = checkerBoardData[0];
