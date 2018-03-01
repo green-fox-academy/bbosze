@@ -8,13 +8,17 @@
 // fibonacci number, with n=0 representing the start of the sequence.
 
 
-let start:number = 0;
-let res: number = 0;
+let res:number = 0;
+let fibArr: number[] = [2, 3]
+
+function fibonacci(n) {
+
+  res = fibArr[1] + fibArr[2]
 
 
+}
 
-
-console.log(fibonacci(3));
+console.log(fibonacci(6))
 
 
 
