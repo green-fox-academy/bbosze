@@ -40,17 +40,17 @@ class DiceSet {
 }
 
 
-
-
 let myDice = new DiceSet();
 myDice.roll();
 myDice.getCurrent();
 for (let i:number = 0; i < myDice.numOfDices; i++) {
-  console.log("------------------");
+
   while (myDice.dices[i] !== 6){
     myDice.reroll(i);
     myDice.getCurrent(i);
-}}
+}
+console.log("------------------");
+}
 
 
 
