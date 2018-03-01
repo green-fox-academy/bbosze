@@ -7,7 +7,10 @@
 
 let result = 1
 function powerN(base, n) {
-  if (n > 0) {
+  if (n === 0) {
+    return 1;
+  }
+  else if (n > 0) {
       n--
       result = result * base
       powerN(base, n);
@@ -15,4 +18,16 @@ function powerN(base, n) {
     }
   }
 
-console.log(powerN(2,3));
+console.log(powerN(2,0));
+
+
+// function power(i: number, j: number) {
+//   if (j === 0) {
+//     return 1;
+//   }
+//     else {
+//     return i * power(i, j - 1);
+//   }
+// }
+//
+// console.log(power(5, 0))

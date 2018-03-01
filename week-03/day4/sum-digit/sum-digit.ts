@@ -6,13 +6,13 @@
 
 let sum: number = 0;
 function sumDigit(n) {
-  if (n >= 0) {
-    let sumz:number = n % 10
-    sum += sumz
-    n = (n - (n % 10)) / 10
+  if (n > 0) {
+    let sumz:number = n % 10;
+    sum += sumz;
+    n = (n - (n % 10)) / 10;
     sumDigit(n)
     return sum
   }
 }
 
-console.log(sumDigit(1249));
+console.log(sumDigit(321));
