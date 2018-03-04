@@ -8,8 +8,9 @@ ctx.lineWidth = 1;
 let size: number = canvas.width
   ctx.fillStyle = '#b0e79b';
   ctx.fillRect(0, 0, size, size);
-  let x = 0;
-function prototype(size, x, y) {
+
+
+  function prototype(size, x, y) {
   ctx.strokeStyle = 'grey';
 
   ctx.beginPath();
@@ -23,7 +24,7 @@ function prototype(size, x, y) {
   ctx.lineTo(x + size, y + size / 3 * 2);
   ctx.stroke();
 
-  if(size > 20) {
+  if(size > 50) {
     prototype(size / 3, x + size / 3, y);
     prototype(size / 3, x + size / 3 * 2, y + size /3);
     prototype(size / 3, x + size / 3, y + size /3 * 2);

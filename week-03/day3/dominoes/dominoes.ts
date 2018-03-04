@@ -47,3 +47,17 @@ newList.push(dominoes[0]);
 dominoes = newList
 
 print(dominoes);
+
+
+
+for (let i:number = 0; i < dominoes.length; i++) {
+     if (newList[0].values[1] === dominoes[i].values[0]) {
+       newList.push(dominoes[i]);
+
+for (let i:number = 0; i < dominoes.length; i++) {
+    if (newList[1].values[1] === dominoes[i].values[0]) {
+      newList.push(dominoes[i]);
+
+for (let i:number = 0; i < dominoes.length; i++) {
+     if (newList[2].values[1] === dominoes[i].values[0]) {
+       newList.push(dominoes[i]);
