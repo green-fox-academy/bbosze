@@ -44,7 +44,6 @@ class Bird extends Animal implements Flyable {
   fly(kilometers: number) {
     this.tiredness -= kilometers;
   }
-
 }
 
 let reptile = new Reptile("Crocodile");
