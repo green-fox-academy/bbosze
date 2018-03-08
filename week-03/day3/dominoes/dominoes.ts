@@ -4,11 +4,18 @@
 // Order them into one snake where the adjacent dominoes have the same numbers on their adjacent sides
 // // eg: [2, 4], [4, 3], [3, 5] ...
 
+import { Printable } from '/Users/Balazs/dev/greenfox/bbosze/week-04/day3/printable/printable'
 
-class Domino {
+class Domino implements Printable {
     values: number[];
     constructor(valueA: number, valueB: number) {
-        this.values = [valueA, valueB];
+      this.values = [valueA, valueB];
+    }
+    printAllFields() {
+      this.values.forEach(function (value) {
+          console.log(value);
+      });
+
     }
 }
 
@@ -23,15 +30,15 @@ function initializeDominoes(): Domino[] {
     return dominoes;
 }
 
-function print(dominoes: Domino[]) {
-    dominoes.forEach(function (value) {
-        console.log(value);
-    });
-}
+// function print(dominoes: Domino[]) {
+//     dominoes.forEach(function (value) {
+//         console.log(value);
+//     });
+// }
 
 let dominoes = initializeDominoes();
 
-console.log(dominoes[0].values[1]);
+
 
 let newList:any[] = []
 newList.push(dominoes[0]);
@@ -46,18 +53,4 @@ newList.push(dominoes[0]);
 
 dominoes = newList
 
-print(dominoes);
-
-
-
-for (let i:number = 0; i < dominoes.length; i++) {
-     if (newList[0].values[1] === dominoes[i].values[0]) {
-       newList.push(dominoes[i]);
-
-for (let i:number = 0; i < dominoes.length; i++) {
-    if (newList[1].values[1] === dominoes[i].values[0]) {
-      newList.push(dominoes[i]);
-
-for (let i:number = 0; i < dominoes.length; i++) {
-     if (newList[2].values[1] === dominoes[i].values[0]) {
-       newList.push(dominoes[i]);
+dominoes[3].printAllFields();

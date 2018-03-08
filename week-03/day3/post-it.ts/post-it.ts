@@ -26,7 +26,6 @@ class PostIt {
     if (size < 41) {
         this.size = size
     }
-
   }
 }
 

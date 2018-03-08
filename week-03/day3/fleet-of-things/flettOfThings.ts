@@ -1,5 +1,7 @@
 'use strict'
 
+import { Printable } from '/Users/Balazs/dev/greenfox/bbosze/week-04/day3/printable/printable'
+
 class Thing {
     length: number;
     private name: string;
@@ -22,7 +24,7 @@ class Thing {
     }
 }
 
-class Fleet {
+class Fleet implements Printable {
     private things: Thing[] = [];
 
     constructor(){}
@@ -33,14 +35,13 @@ class Fleet {
       console.log(this.things[i])
     }
 
-    printAll() {
+    printAllFields() {
       for (let i:number = 0; i < this.things.length; i++){
+        let mark = ' ';
         if (this.things[i].completer) {
-          console.log('[ ] ' + this.things[i].names);
+          mark = 'X';
           }
-         else {
-           console.log('[X] ' + this.things[i].names);
-         }
+         console.log((i+1) + '. [' + mark + '] ' + this.things[i].names);
         }
       }
     }
@@ -55,14 +56,9 @@ let thing4 = new Thing('Eat lunch');
 thing2.complete()
 thing4.complete()
 
-// console.log(thing1);
-// console.log(thing3)
-
 fleet.add(thing1); //OR fleet.add(new Thing('Eat lunch'));
 fleet.add(thing2);
 fleet.add(thing3);
 fleet.add(thing4);
 
-
-
-fleet.printAll();
+fleet.printAllFields();
