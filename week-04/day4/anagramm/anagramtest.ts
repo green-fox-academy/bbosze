@@ -11,12 +11,9 @@ test('get a boolean wether it\'s an anagram or not', t => {
   t.end();
 });
 
-
 test('get a boolean wether it\'s an anagram or not', t => {
   const testString1 = 'erdő';
-  const testString2 = 'rdase';
-  var actual1 = realAnagram(testString1, testString2);
-  var expected = false;
-  t.equal(actual1, expected);
+  const testString2 = 'dőre';
+  t.equal(realAnagram(testString1, testString2), true);
   t.end();
 });
