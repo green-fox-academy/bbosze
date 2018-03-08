@@ -2,7 +2,7 @@ import { test } from 'tape';
 import { Basket } from './apples';
 
 
-test('add 2 numbers', t => {
+test('get an apple', t => {
   const testbasket = new Basket();
 
   var actual = testbasket.getApple();
