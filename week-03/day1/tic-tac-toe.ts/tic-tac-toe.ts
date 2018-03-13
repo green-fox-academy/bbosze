@@ -28,37 +28,24 @@ function resultRead(filename) {
   }
 }
 
-
-function winner(file:string, game1: string, game2: string, game3: string, player: string, player2:string){
-  resultRead(file);
-  for (let i: number = 0; i < map.length; i++)
-
-  if (game1 === player && game2 === player && game3 === player) {
-    console.log('X wins')
-  } else if ((game1 === player2 && game2 === player2 && game3 === player2)) {
-    console.log('O wins')
-   } //else {
-  //   console.log('It is a draw.')
-  // }
+function winner(file1:string){
+  try {
+    resultRead(file1);
+    if (resArr[0] === 'X' && resArr[1] === 'X'  && resArr[2] === 'X' || resArr[4] === 'X' && resArr[5] === 'X'  && resArr[6] === 'X' || resArr[8] === 'X' && resArr[9] === 'X'  && resArr[10] === 'X' || resArr[0] === 'X' && resArr[4] === 'X'  && resArr[8] === 'X' || resArr[1] === 'X' && resArr[5] === 'X'  && resArr[9] === 'X' || resArr[2] === 'X' && resArr[6] === 'X'  && resArr[10] === 'X' || resArr[0] === 'X' && resArr[5] === 'X'  && resArr[10] === 'X' || resArr[2] === 'X' && resArr[5] === 'X'  && resArr[8] === 'X')  {
+      console.log('X wins');
+    } else if
+    (resArr[0] === 'O' && resArr[1] === 'O'  && resArr[2] === 'O' || resArr[4] === 'O' && resArr[5] === 'O'  && resArr[6] === 'O' || resArr[8] === 'O' && resArr[9] === 'O'  && resArr[10] === 'O' || resArr[0] === 'O' && resArr[4] === 'O'  && resArr[8] === 'O' || resArr[1] === 'O' && resArr[5] === 'O'  && resArr[9] === 'O' || resArr[2] === 'O' && resArr[6] === 'O'  && resArr[10] === 'O' || resArr[0] === 'O' && resArr[5] === 'O'  && resArr[10] === 'O' || resArr[2] === 'O' && resArr[5] === 'O'  && resArr[8] === 'O')  {
+      console.log('O wins');
+    } else {
+      console.log(`It's a draw!`)
+    }
+  }
+  catch {
+    console.log('ERR');
+  }
+  finally {
+    console.log(`The war is over.`);
+  }
 }
 
-
-
-winner('win-x.txt', resArr[0], resArr[1], resArr[2], 'X', 'O');
-winner('win-x.txt', resArr[4], resArr[5], resArr[6], 'X', 'O');
-winner('win-x.txt', resArr[8], resArr[9], resArr[10], 'X', 'O');
-winner('win-x.txt', resArr[0], resArr[4], resArr[8], 'X', 'O');
-winner('win-x.txt', resArr[1], resArr[5], resArr[9], 'X', 'O');
-winner('win-x.txt', resArr[2], resArr[6], resArr[10], 'X', 'O');
-winner('win-x.txt', resArr[0], resArr[5], resArr[10], 'X', 'O');
-winner('win-x.txt', resArr[2], resArr[5], resArr[8], 'X', 'O');
-
-
-// winner(resArr[0], resArr[1], resArr[2], 'O');
-// winner(resArr[4], resArr[5], resArr[6], 'O');
-// winner(resArr[8], resArr[9], resArr[10], 'O');
-// winner(resArr[0], resArr[4], resArr[8], 'O');
-// winner(resArr[1], resArr[5], resArr[9], 'O');
-// winner(resArr[2], resArr[6], resArr[10], 'O');
-// winner(resArr[0], resArr[5], resArr[10], 'O');
-// winner(resArr[2], resArr[5], resArr[8], 'O');
+winner('win-x.txt');
