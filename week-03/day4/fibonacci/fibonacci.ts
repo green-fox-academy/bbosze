@@ -11,21 +11,22 @@
 let res:number = 0;
 let fibArr: number[] = [0, 1]
 
-function fibonacci(n) {
-  if (n > 2) {
-    res = fibArr[0] + fibArr[1]
-    fibArr[0] = fibArr[1]
+let fibonacci = (n) => {
+ if (n > 2) {
+     res = fibArr[0] + fibArr[1]
+     fibArr[0] = fibArr[1]
     fibArr[1] = res
-        n -= 1;
-    fibonacci(n);
-  }
-  else if (n === 1){
-    res = fibArr[0]
-  }
-  else if (n === 2) {
-    res = fibArr[1]
-  }
-  return res
+      n -= 1;
+        fibonacci(n);
+ }
+ else if (n === 1){
+   res = fibArr[0]
+ }
+ else if (n === 2) {
+   res = fibArr[1]
+ }
+ return res
 }
+
 
 console.log(`The 6th fibonacci number is ${fibonacci(6)}.`);
