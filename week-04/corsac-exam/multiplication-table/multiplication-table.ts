@@ -15,11 +15,31 @@
 //  9 * 5 = 45
 //  10 * 5 = 50
 
-function multiplicationTable(baseNumber: number) {
-  for (let i: number = 1; i <= 10; i++) {
-    let result: number = i * baseNumber;
-    console.log(`${i} * ${baseNumber} = ${result}`)
-  }
-}
+// function multiplicationTable(baseNumber: number) {
+//   for (let i: number = 1; i <= 10; i++) {
+//     let result: number = i * baseNumber;
+//     console.log(`${i} * ${baseNumber} = ${result}`)
+//   }
+// }
 
-multiplicationTable(5);
+let i:number = 1
+let result: number
+
+let multiplicationTableWithRecursionArrowFunction = (baseNumber: number) => {
+    i <= 10 ? (result = i * baseNumber,
+    console.log(`${i} * ${baseNumber} = ${result}`),
+    i++,
+    multiplicationTableWithRecursion(baseNumber))
+    : null
+  }
+
+function multiplicationTableWithRecursion(baseNumber: number) {
+    i <= 10 ? (result = i * baseNumber,
+    console.log(`${i} * ${baseNumber} = ${result}`),
+    i++,
+    multiplicationTableWithRecursion(baseNumber))
+    : null
+  }
+
+
+multiplicationTableWithRecursionArrowFunction(5);
