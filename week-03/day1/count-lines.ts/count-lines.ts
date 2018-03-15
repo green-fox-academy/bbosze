@@ -49,7 +49,7 @@ function countLine(filename) {
         }
       else {
         lines = 0 }
-        return console.log(lines);
+        lines;
       }
 
 try {

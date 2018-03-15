@@ -35,7 +35,7 @@ function hexa(x, y, s) {
   ctx.stroke();
 
 if(s > 5) {
-  hexa(x, y, s/2);
+  hexa(x, y, s / 2);
   hexa(x, y + s * Math.sqrt(3) /2, s / 2)
   hexa(x + 1.5 * s / 2, y + s /2  * Math.sqrt(3) /2, s / 2)
     }

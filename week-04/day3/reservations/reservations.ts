@@ -1,13 +1,13 @@
 'use strict'
 
-interface Reservationy {
+interface Reservations {
   getDowBooking(): string;
   getCodeBooking(): string;
 }
 
-let daysOfTheWeek: string[] = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
-class Reservation implements Reservationy {
 
+class Reservation implements Reservations {
+daysOfTheWeek: string[] = ['MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', 'SUN']
 bookingDay: string
 bookingCode: string;
 
@@ -16,11 +16,11 @@ bookingCode: string;
     this.bookingDay = this.getDowBooking()
   }
   getDowBooking() {
-  return daysOfTheWeek[Math.floor(Math.random() * 7)];
+  return this.daysOfTheWeek[Math.floor(Math.random() * 7)];
   }
 
   getCodeBooking() {
-  return Math.random().toString(36).toUpperCase().substring(5)
+  return Math.random().toString(35).toUpperCase().substring(5)
   }
 }
 
@@ -28,13 +28,11 @@ bookingCode: string;
 class Hotel {
   reservations: Reservation[] = [];
   constructor() {
-    this.reservations = []
-
-      }
+    this.reservations = [];
+  }
 
   addReservation(newRes) {
     this.reservations.push(newRes);
-
   }
 
   printReservations() {

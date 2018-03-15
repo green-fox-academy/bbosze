@@ -9,34 +9,23 @@
 
 
 let res:number = 0;
-let fibArr: number[] = [2, 3]
+let fibArr: number[] = [0, 1]
 
 function fibonacci(n) {
-
-  res = fibArr[1] + fibArr[2]
-
-
+  if (n > 2) {
+    res = fibArr[0] + fibArr[1]
+    fibArr[0] = fibArr[1]
+    fibArr[1] = res
+        n -= 1;
+    fibonacci(n);
+  }
+  else if (n === 1){
+    res = fibArr[0]
+  }
+  else if (n === 2) {
+    res = fibArr[1]
+  }
+  return res
 }
 
-console.log(fibonacci(6))
-
-
-
-// let count: number = 0;
-// let fibArr: number[] = [0, 1];
-//
-// function fibonacci(n: number, fib: number[]): number {
-//   if (n <= 0) {
-//     return count % 2 === 0
-//       ? fib[0]
-//       : fib[1];
-//   }
-//   if (count % 2 === 0) {
-//     fib[0] += fib[1];
-//   } else {
-//     fib[1] += fib[0];
-//   }
-//   count += 1;
-//   return fibonacci(n - 1, fib);
-// }
-// console.log(fibonacci(2, fibArr));
+console.log(`The 6th fibonacci number is ${fibonacci(6)}.`);

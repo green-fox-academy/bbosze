@@ -94,6 +94,8 @@ console.log(garden.plants);
 garden.waterPlants(40);
 console.log(garden.plants);
 
+
+
 //
 // class Garden {
 //   name: string;
