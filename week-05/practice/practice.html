@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My first game</title>
+    <style>
+      .main-canvas {
+        margin: 20px;
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas width="480" height="270" class="main-canvas"></canvas>
+    <script type="text/typescript" src="practice.ts"></script>
+    <script src="https://rawgit.com/Microsoft/TypeScript/master/lib/typescriptServices.js"></script>
+    <script src="https://rawgit.com/basarat/typescript-script/master/transpiler.js"></script>
+    <div style="text-align:center;width:480px;">
+      <button onmousedown="myHero.moveUp()" onmouseup="myHero.stopMove()" ontouchstart="myHero.moveUp()">UP</button><br><br>
+      <button onmousedown="myHero.moveLeft()" onmouseup="myHero.stopMove()" ontouchstart="myHero.moveLeft()">LEFT</button>
+      <button onmousedown="myHero.moveRight()" onmouseup="myHero.stopMove()" ontouchstart="myHero.moveRight()">RIGHT</button><br><br>
+      <button onmousedown="myHero.moveDown()" onmouseup="myHero.stopMove()" ontouchstart="myHero.moveDown()">DOWN</button>
+    </div>
+    <div class="hero" style="display:none;">
+      <img id="heroup" src="heroup.png">
+      <img id="heroleft" src="heroleft.png">
+      <img id="heroright" src="heroright.png">
+      <img id="herodown" src="herodown.png">
+    </div>
+  </body>
+</html>
