@@ -8,23 +8,26 @@ class Aquarium {
   }
 
   feedAllFishes() {
-    for (let i: number = 0; i < this.fishes.length; i++) {
-      this.fishes[i].feed();
-    }
+    this.fishes.forEach(fish => {fish.feed() })
+
+    // for (let i: number = 0; i < this.fishes.length; i++) {
+    //   this.fishes[i].feed();
+    // }
   }
 
   status() {
-    for (let i: number = 0; i < this.fishes.length; i++) {
-      console.log(this.fishes[i].status);
-    }
+    this.fishes.forEach(fish => {console.log(fish.status)})
+    // for (let i: number = 0; i < this.fishes.length; i++) {
+    //   console.log(this.fishes[i].status);
+    // }
   }
 
   removeOversizedFishes() {
-    for (let i: number = 0; i < this.fishes.length; i++) {
-      if (this.fishes[i].weight >= 11) {
+    this.fishes.forEach((fish, i) => {
+      fish.weight >= 11 ?
         this.fishes.splice(i, 1)
-      }
-    }
+        : null;
+    });
   }
 }
 

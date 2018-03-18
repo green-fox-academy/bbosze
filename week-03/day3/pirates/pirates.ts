@@ -65,7 +65,7 @@ class Ship {
     })
   }
 
-  CheckLivingPirates() {
+  checkLivingPirates() {
     this.numberOfPirates = 0;
     this.pirateCrew.forEach(pirate => {
       pirate.isLive ? this.numberOfPirates ++
@@ -75,14 +75,14 @@ class Ship {
   }
 
   checkAll() {
-    this.CheckLivingPirates();
+    this.checkLivingPirates();
     this.checkCaptain();
   }
 
   shipStatus() {
     this.checkAll();
     this.hasThisShipACaptain ?
-    (console.log(`This ship has ${this.CheckLivingPirates()} living pirates it's captain's ${this.isCaptainLive ? `still living` : `dead`}.`), this.isCaptainLive ? console.log(`He drank ${this.captainDrinkCounter} rum(s), he's ${this.isCaptainPassedOut ? `passed out.` : 'sober.'}`) : null) : console.log(`This ship still has no captain, please fill it!`)
+    (console.log(`This ship has ${this.checkLivingPirates()} living pirates it's captain's ${this.isCaptainLive ? `still living` : `dead`}.`), this.isCaptainLive ? console.log(`He drank ${this.captainDrinkCounter} rum(s), he's ${this.isCaptainPassedOut ? `passed out.` : 'sober.'}`) : null) : console.log(`This ship still has no captain, please fill it!`)
   }
 
   calculateScore(): number {
@@ -141,10 +141,26 @@ class Ship {
 let myShip = new Ship()
 myShip.fillShip(new Pirate());
 myShip.fillShip(new Pirate());
-myShip.addCaptain(new Captain());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
+myShip.fillShip(new Pirate());
 myShip.addCaptain(new Captain());
 
 let enemyShip = new Ship();
+enemyShip.fillShip(new Pirate());
+enemyShip.fillShip(new Pirate());
+enemyShip.fillShip(new Pirate());
+enemyShip.fillShip(new Pirate());
+enemyShip.fillShip(new Pirate());
+enemyShip.fillShip(new Pirate());
+enemyShip.fillShip(new Pirate());
 enemyShip.fillShip(new Pirate());
 enemyShip.fillShip(new Pirate());
 enemyShip.addCaptain(new Captain);

@@ -57,14 +57,14 @@ display: flex
 }
 
 .articlecontent {
-  background-color: green;
+  background: linear-gradient(45deg, #cb2d3e, #ef479a);
   height: 100%;
   flex: 2;
 
 }
 
 .sidebar {
-  background-color: blue;
+  background: linear-gradient(pink, purple);
   height: 100%;
   flex: 1;
 }
