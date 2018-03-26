@@ -1,0 +1,98 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: arial;
+  text-decoration: none;
+}
+
+body {
+  background: #e7f9f9;
+  margin: 0px 200px;
+}
+
+header {
+  width: 100%;
+  background: #eeeeaf;
+  height: 100px;
+  margin-top: 1%;
+  margin-bottom: 1%;
+}
+
+header a {
+  text-decoration: uppercase;
+  float: right;
+  margin: 1%;
+  padding: 1%;
+  color: green;
+  text-transform: uppercase;
+}
+
+header a:first-child, a:nth-child(2) {
+  float: left;
+}
+
+.services section {
+  width: 31.1%;
+  margin: 1% 0;
+  background: #afeeee;
+  padding: 1%;
+  display: inline-block;
+  height: auto;
+  text-align: center;
+  float: right;
+  border: 1px;
+  border-color: #eeeeaf;
+  border-style: solid;
+  font-size: 12px;
+  font-weight: normal;
+  color: #808080;
+}
+
+main h1 {
+  color: #808080;
+  font-weight: normal;
+}
+
+main a {
+  color: #808080;
+}
+
+
+main a:visited {
+  color: #808080;
+}
+
+main p, h2 {
+  margin: 1%;
+  padding: 1%;
+}
+
+.columns:after, .services:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+.content {
+  padding: 1px;
+  background: #eeeeaf;
+  clear: both;
+  margin-top: 20px 1%;
+}
+
+.columns section, aside {
+  float: left;
+  width: 46%;
+  padding: 1%;
+  margin: 1%;
+  background: #f2f2f2;
+}
+
+.content p {
+  -webkit-column-count: 3;
+  column-count: 3;
+  -webkit-column-gap: 50px;
+  column-gap: 50px;
+  -webkit-column-rule: 1px solid #ccc;
+  column-rule: 1px solid #ccc;
+  text-align: justify;
+}

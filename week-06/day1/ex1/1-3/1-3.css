@@ -1,0 +1,25 @@
+.container {
+  display: flex;
+  background-color: gainsboro;
+  flex-direction: row-reverse;
+
+}
+
+.item {
+  height: 100px;
+}
+
+.green {
+  background-color: green;
+  flex: 1;
+}
+
+.yellow {
+  background-color: yellow;
+  flex: 2;
+}
+
+.purple {
+  background-color: purple;
+  flex:1;
+}

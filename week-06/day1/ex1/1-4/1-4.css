@@ -1,0 +1,30 @@
+html, body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  background: gainsboro;
+  flex-direction: column;
+  height: 100%;
+}
+
+.item {
+  width: 300px;
+}
+
+.green {
+  background: green;
+  flex-grow: 1;
+}
+
+.yellow {
+  background: yellow;
+  flex-grow: 2;
+  order: 2;
+}
+
+.purple {
+  background: purple;
+  flex-grow: 1;
+}

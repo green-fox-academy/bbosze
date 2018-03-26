@@ -1,0 +1,63 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+  background: lavenderblush;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background: cyan;
+  height: 100px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  position: fixed
+
+  width: 50%;
+}
+
+footer {
+  background: blue;
+  height: 100px;
+}
+
+main {
+  height: 100%;
+  display: flex;
+
+}
+section {
+  background: yellow;
+  flex-grow: 3;
+  display: flex;
+  align-items: flex-end;
+  flex-direction: row-reverse;
+}
+
+aside {
+  width: 100px;
+}
+
+.orange {
+  background: orange;
+  margin-right: 5%;
+}
+
+.purple {
+  background: purple;
+  margin-left: 5%;
+}
+
+div {
+  height: 100px;
+  width: 100px;
+  background: black;
+  margin: 20px;
+}

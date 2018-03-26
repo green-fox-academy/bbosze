@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+html, body {
+  height: 100%;
+}
+
+.container {
+  display: flex;
+  background: yellow;
+  height: 600px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.item {
+  width: 100px;
+  height: 100px;
+  background: purple;
+  display: inline-block;
+}
