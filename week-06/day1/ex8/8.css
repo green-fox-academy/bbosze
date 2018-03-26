@@ -7,24 +7,23 @@ html, body {
   background: lavenderblush;
 }
 
-body {
-  display: flex;
-  flex-direction: column;
-  max-width: 800px;
-  margin: 0 10%;
-}
+
 
 header {
   background: purple;
   height: 50px;
   display: flex;
+  position: fixed;
   width: 100%;
   justify-content: space-between;
+  z-index: 1;
 }
 
 header ul {
   display: flex;
   align-items: center;
+  margin-left: 10%;
+  margin-right: 10%
 }
 
 .social li {
@@ -32,7 +31,7 @@ header ul {
   height: 30px;
   background: cyan;
   list-style-type: none;
-  margin-right: 20px;
+  margin-left: 20px;
 }
 
 .navi li {
@@ -43,65 +42,63 @@ header ul {
   margin-right: 20px;
 }
 
-.navi li:first-child {
-  margin-left: 20px;
-}
-
-header li:last-child {
-  margin-right: 20px;
-}
-
 
 main {
   display: flex;
-  margin-top: 20px;
   min-height: calc(100vh - 150px);
-}
-section {
-  background: yellow;
-  flex: 8;
+  max-width: 800px;
+  margin: 0 10%;
+  flex-direction: column;
+  padding-top: 60px;
 }
 
-aside {
-  background: green;
-
-  width: 200px;
-}
 
 footer {
   background: grey;
   height: 50px;
+  margin: 0 10%;
   margin-top: 20px;
 }
 
-.gallery {
+.row-1, .row-2 {
   display: flex;
 }
-.image {
-  background: red;
+
+.row {
+  flex-grow: 1;
+  max-width: 50%;
+
+}
+
+section {
+  background: chartreuse;
+  margin: 10px;
+  height: 250px;
+
+
+}
+
+.gallery-1 {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.gallery-2 {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.row-2-2 {
+  flex-grow: 2;
+}
+
+.item {
+  height: 200px;
   width: 100%;
   max-width: 100px;
-  height: 100px;
-  margin: 10px;
-
-}
-
-p {
-  text-align: left;
-  padding: 10px;
-}
-
-.columns {
-  column-count: 2;
-}
-
-.buttons {
-  display: flex;
-  flex-direction: column;
-}
-
-.button {
-  height: 30px;
   background: grey;
-  margin: 10px;
 }
