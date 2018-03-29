@@ -7,6 +7,6 @@ let pContents = document.querySelectorAll('p');
 //   pContents[i].innerHTML = lastPcontent;
 // }
 
-pContents.forEach(pContent => {
-  pContent.innerHTML = lastPcontent;
+pContents.forEach(item => {
+  item.innerHTML = lastPcontent;
 });

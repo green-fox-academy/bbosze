@@ -1,0 +1,161 @@
+* {
+  padding: 0;
+  margin: 0;
+
+}
+html, body {
+  height: 100%;
+}
+
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);;
+  font-family: Montserrat;
+  color: white;
+  position: fixed;
+}
+
+main {
+  height: 100%;
+}
+
+.gallery {
+  background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%
+}
+
+.picture-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.picture {
+  width: 640px;
+  height: 360px;
+  background: #ccc;
+  position: relative;
+}
+
+.info {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    font-family: Montserrat;
+    color: white;
+    background: rgba(0,0,0,0.4);
+    width: 100%;
+    padding: 1px;
+    opacity: 0;
+}
+
+.info h1 {
+  font-size: 20px;
+  padding: 0;
+  margin: 0 0 5px 2px;
+}
+
+.info p {
+  font-size: 14px;
+  padding: 0;
+  margin: 0 0 10px 2px;
+}
+
+.info:hover {
+  opacity: 1;
+}
+
+.pager {
+  width: 30px;
+  height: 360px;
+  background: #51d400;
+  border: 0;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+.pager:not(.disabled):hover {
+  background: #ffd62a;
+  color: red;
+}
+
+.pager:not(.disabled):active {
+  transform: scale(0.9);
+}
+
+.pager.disabled {
+  background: #ccc;
+  cursor: default;
+}
+
+.thumbnails ul {
+  display: flex;
+  width: 400px;
+  margin: 0 auto;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.thumbnails ul li {
+  width: 48px;
+  height: 36px;
+  margin: 30px 5px 0 5px;
+  background: #ccc;
+  box-shadow: 0px 5px 15px grey;
+}
+
+.thumbnails ul li a,
+.thumbnails ul li img {
+  display: block;
+}
+
+.thumbnails ul li a {
+  position: relative;
+}
+
+.thumbnails ul li:not(.select) a:hover::before {
+  content: '';
+  width: 48px;
+  height: 36px;
+  background: rgba(0,0,0,0.3);
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  box-shadow: 0px 15px 15px grey;
+}
+
+.thumbnails ul li.select a {
+  cursor: default;
+}
+
+.thumbnails ul li.select a::after {
+  content: '';
+  width: 48px;
+  height: 36px;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  border: 3px solid salmon;
+  box-sizing: border-box;
+}
+
+.thumbnails p {
+  margin-top: 40px;
+  font-size: 30px;
+  color: grey;
+  font-family: Montserrat;
+}
