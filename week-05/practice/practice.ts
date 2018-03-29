@@ -8,9 +8,6 @@ class gameArea {
   startGame() {
 
   }
-
-
-
 }
 
 class Hero {
@@ -23,7 +20,7 @@ class Hero {
   speedX: number = 0;
   speedY: number = 0;
   key: any; //still not works maybe not necessary
-  image = document.getElementById('heroright');
+  image = document.getElementById('heroright') as HTMLImageElement;
 
   constructor(width, height, color, xPosition, yPosition) {
     this.width = width;
@@ -52,13 +49,13 @@ class Hero {
     this.clearHero();
     this.drawbackground();
     //this.speedY = 0;
-    if (myHero.key && myHero.key === 37) {this.speedY = -1; }
+    //if (myHero.key && myHero.key === 37) {this.speedY = -1; }
     this.newPosition()
     this.drawHero();
   }
 
   interval() {
-      setInterval(function() {myHero.updateGameArea()}, 20);
+      setInterval(function() {myHero.updateGameArea()}, 10);
      //Why doesn't work with 'this'?
   }
 
@@ -99,22 +96,22 @@ class Hero {
     if (this.yPosition > 0) {
       this.speedY -= 1;
     }
-    this.image = document.getElementById('heroup');
+    this.image = document.getElementById('heroup') as HTMLImageElement;
   }
 
   moveDown() {
     this.speedY += 1;
-    this.image = document.getElementById('herodown');
+    this.image = document.getElementById('herodown') as HTMLImageElement;
   }
 
   moveLeft() {
     this.speedX -= 1;
-    this.image = document.getElementById('heroleft');
+    this.image = document.getElementById('heroleft') as HTMLImageElement;
   }
 
   moveRight() {
     this.speedX += 1;
-    this.image = document.getElementById('heroright');
+    this.image = document.getElementById('heroright') as HTMLImageElement;
   }
 
 
