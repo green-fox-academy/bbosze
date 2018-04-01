@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Click three times</h2>
+  <button>Click on me 3 times!</button>
+  <p>Less than 5 seconds ellapsed, can't click yet!</p>
+<script>
+
+let counter = 0;
+let button = document.querySelector('button');
+let p = document.querySelector('p');
+var startDate = new Date();
+var startTime = startDate.getTime();
+var elapsed_seconds;
+
+let seconds_elapsed = () => {
+  var date_now = new Date ();
+  var time_now = date_now.getTime ();
+  var time_diff = time_now - startTime;
+  elapsed_seconds = Math.floor ( time_diff / 1000 );
+}
+
+let click = () => {
+  seconds_elapsed();
+  if (elapsed_seconds > 5) {
+    counter++
+    if (counter >= 3) {
+        p.innerText = `${elapsed_seconds} seconds ellapsed and clicked at least 3 times`;
+    }
+  }
+}
+
+document.addEventListener('click', click);
+</script>
+
+</body>
+</html>
+
+<!--
+Create a simple HTML document with one button.
+If the user clicks the button 3 times, and 5 seconds is already ellapsed since the page is loaded, a text should apper under the button:
+5 seconds ellapsed and clicked 3 times
+If the user starts clicking before the first 5 seconds, nothing should be printed -->

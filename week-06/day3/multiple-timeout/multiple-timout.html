@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>Multiple timeout</h2>
+
+<script>
+let printFruits = () => {
+  setTimeout(() => {document.write ('apple <br>');}, 0);
+  setTimeout(() => {document.write ('melon <br>');}, 3000);
+  setTimeout(() => {document.write ('grapes <br>');}, 5000);
+}
+
+printFruits();
+
+</script>
+
+</body>
+</html>
+
+<!-- Write a program that prints the following fruits:
+apple -> immediately
+pear -> after 1 seconds
+melon -> after 3 seconds
+grapes -> after 5 seconds -->
