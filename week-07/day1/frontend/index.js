@@ -86,3 +86,42 @@ app.post('/dountil/:what', (req, res) => {
     });
   }
 });
+
+
+//ARRAY-HANDLER
+
+app.post('/arrays/:what', (req, res) => {
+  let number = req.body.numbers;
+  const what = req.params.what;
+  let result = 0;
+  if (what === 'sum') {
+    for (let i = 0; i < number.length; i++) {
+      result += number[i];
+    }
+    res.json({
+      result: result,
+    });
+  }
+  if (what === 'multiply') {
+    result = 1;
+    for (let i = 0; i < number.length ; i++) {
+      result *= number[i];
+    }
+    res.json({
+      result: result,
+    });
+  }
+  if (what === 'double') {
+    for (let i = 0; i < number.length ; i++) {
+      number[i] = number[i] * 2;
+    }
+    res.json({
+      result: number,
+    });
+  }
+  else {
+    res.json({
+      error: 'Please provide what to do with the numbers!',
+    });
+  }
+});

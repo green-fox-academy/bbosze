@@ -1,0 +1,14 @@
+{
+  "name": "yoda",
+  "version": "1.0.0",
+  "description": "",
+  "main": "yoda.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
