@@ -55,6 +55,34 @@ app.get('/greeter', (req, res) => {
 app.get('/appenda/:appendable', (req, res) => {
   const data = req.params.appendable + 'a';
   res.json({
-    appended: `${data}`
+    appended: data,
   });
+});
+
+//DO UNTIL
+
+app.post('/dountil/:what', (req, res) => {
+  let number = req.body.until;
+  const what = req.params.what;
+  if (what === 'sum') {
+    for (let i = number - 1; i > 0; i--) {
+      number += i
+    }
+    res.json({
+      result: number,
+    });
+  }
+  if (what === 'factor') {
+    for (let i = number - 1; i > 0; i--) {
+      number *= i;
+    }
+    res.json({
+      result: number,
+    });
+  }
+  else {
+    res.json({
+  "error": "Please provide a number!"
+    });
+  }
 });
