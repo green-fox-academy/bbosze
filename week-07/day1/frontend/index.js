@@ -17,6 +17,7 @@ app.get('/', (req, res) => {
   res.sendFile(path.join(__dirname, './index.html'));
 });
 
+//DOUBLING
 app.get('/doubling', (req, res) => {
   const number = req.query.input;
   if (number != undefined) {
@@ -31,10 +32,29 @@ app.get('/doubling', (req, res) => {
   });
 
 
-// app.get('/api/hello', (req, res) => {
-//   console.log(req.query);
-//   const name = req.query.name || 'Guest';
-//   res.json({
-//     message: `Hello ${name}`,
-//   });
-// });
+
+app.get('/greeter', (req, res) => {
+  const data = req.query;
+  if (data.name === undefined) {
+    res.json({
+      error: 'Please provide a name!'
+    });
+  }
+  else if (data.title === undefined) {
+    res.json({
+      error: 'Please provide a title!'
+    });
+  }
+  res.json({
+    welcome_message: `Oh, hi there ${data.name}, my dear ${data.title}!`
+  });
+});
+
+
+//APPEND A
+app.get('/appenda/:appendable', (req, res) => {
+  const data = req.params.appendable + 'a';
+  res.json({
+    appended: `${data}`
+  });
+});
