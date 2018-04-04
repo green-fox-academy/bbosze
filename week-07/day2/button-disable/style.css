@@ -1,0 +1,33 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: grey;
+}
+
+.container {
+  margin-left: 25%;
+  width: 50%;
+  background: -webkit-linear-gradient(90deg, rgb(252, 255, 243), rgb(230, 241, 252));
+  background: linear-gradient(90deg, rgb(252, 255, 243), rgb(230, 241, 252));
+  position: absolute;
+  top: 200px;
+  padding: 20px;
+  font-family: Raleway;
+}
+
+input {
+  display: inline-block;
+}
+
+button {
+  display: block;
+  font-size: 20px;
+}
+
+
+h2, input, label, button {
+  margin-bottom: 10px;
+}
