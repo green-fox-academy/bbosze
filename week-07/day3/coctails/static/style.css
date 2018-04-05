@@ -20,9 +20,10 @@ body {
   cursor: pointer;
 }
 
-a {
+li a {
   text-decoration: none;
   color: black;
+  margin-right: 5px;
 }
 
 h2 {
