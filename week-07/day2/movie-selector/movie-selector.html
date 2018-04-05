@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Movie selector</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Raleway:300,400" rel="stylesheet">
+  </head>
+  <body>
+    <section class="container">
+      <form>
+        <h1>Movie selector</h1>
+        <select name="genre">
+          <option class="disabled"value="">---Please, select a genre!---</option>
+          <option value="sci-fi">Sci-fi</option>
+          <option value="drama" >Drama</option>
+          <option value="comedy">Comedy</option>
+        </select>
+        <button id="button1" type="button" name="button">Choose genre</button>
+        <select name="movie">
+          <option class="disabled"value="">---Please, select a movie!---</option>
+          <option class="disabled scifi"value="sci-fi">Moon</option>
+          <option class="disabled scifi"value="sci-fi">2001 Space odessy</option>
+          <option class="disabled scifi"value="sci-fi">Contact</option>
+          <option class="disabled drama"value="drama">Darkest hour</option>
+          <option class="disabled drama"value="drama">There will be blood</option>
+          <option class="disabled drama"value="drama">American beauty</option>
+          <option class="disabled comedy"value="comedy">Airplane!</option>
+          <option class="disabled comedy"value="comedy">Deadpool</option>
+          <option class="disabled comedy"value="comedy">Wayne's World</option>
+        </select>
+        <button id="button2" type="button" name="button" disabled>Choose movie</button>
+        <h2>You haven't selected a movie yet!</h2>
+      </form>
+
+    </section>
+  </body>
+  <script src="script.js">
+  </script>
+</html>

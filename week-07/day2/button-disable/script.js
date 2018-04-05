@@ -4,6 +4,7 @@ let input2 = document.querySelectorAll('.question');
 let button1 = document.querySelector('#signup')
 let button2 = document.querySelector('#cats')
 
+console.log(input);
 function enableSignup() {
 button1.disabled = false;
 }

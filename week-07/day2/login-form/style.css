@@ -6,10 +6,13 @@
 
 body {
   background: #ebebeb;
+  font-family: 'Raleway', sans-serif;
 }
 
 header {
   text-align: center;
+  margin-top: 10px;
+  font-size: 40px;
 }
 
 main {
@@ -19,12 +22,12 @@ form {
   background: white;
   margin-top: 20px;
   width: 40%;
+  height: 300px;
   padding: 20px;
   margin-left: 30%;
   width: 40%;
   position: relative;
   border-radius: 10px;
-  font-family: 'Raleway', sans-serif;
 }
 
 .container {
@@ -48,11 +51,12 @@ input {
   height: 30px;
   border-radius: 10px;
   border: 1px solid grey;
-  margin-top: 20px;
+  margin-top: 5px;
+  text-indent: 10px
 }
 
 input:focus {
-  border: 2px solid #4CAF50;
+  border: 1px solid #4CAF50;
   outline: none;
 }
 
@@ -64,7 +68,7 @@ input[type="password"] {
 }
 
 button {
-    background-color: #white;
+    background-color: white;
     color: black;
     border: 2px solid #4CAF50;
     border-radius: 10px;
