@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title><%= name %></title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,400,700" rel="stylesheet">
+  </head>
+  <body>
+    <h1>Hello, <%= name %>!</h1>
+    <h2>Cocktails</h2>
+    <ul class="alcoholList">
+        <li><a href="/">all</a></li>
+      <% alcoholList.forEach(e => {%>
+        <li><a href="?alcohol=<%= e %>"><%= e %><a></li>
+      <%})%>
+    </ul>
+
+    <table>
+      <tr class="coctailList">
+        <thead>
+          <tr class="firstrow">
+            <th>Name</th>
+            <th>Price</th>
+          </tr>
+        </thead>
+        <tbody>
+          <% cocktails.forEach(e => {%>
+            <tr><td>
+              <%= e.name %>
+              <% if (!e.isAlcoholic) {%>
+                (non-alcholic)
+              <% } %>
+              <br>
+              <%= e.contains.join(', ')%>
+            </td>
+            <td><%= e.price %> Ft</td>
+          <%})%>
+        </tr></td>
+      </tbody>
+    </table>
+    <section>
+    </section>
+  </body>
+</html
