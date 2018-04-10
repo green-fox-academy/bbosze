@@ -1,0 +1,44 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: orange;
+}
+
+.container {
+  display: flex;
+  width: 400px;
+  background: grey;
+  justify-content: space-between;
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+}
+
+.elevator {
+  padding: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.elevator div {
+  width: 100px;
+  height: 30px;
+  background: green;
+  margin-top: 10px;
+  text-align: center;
+  line-height: 200%;
+}
+
+.elevator div.active {
+  background: red;
+}
