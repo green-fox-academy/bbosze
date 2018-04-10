@@ -9,6 +9,9 @@
 
 
 function prison(name) {
+  if (name === undefined) {
+    name = 'Balázs'
+  }
   let visitCount = 0;
   let isEscaped = false;
   return {
@@ -24,9 +27,16 @@ function prison(name) {
 }
 
 
-const alcatraz = prison('Sad Panda');
+const alcatraz = prison();
 
 alcatraz.visit(); // Sad Panda is visited 1 time(s)
 alcatraz.visit(); // Sad Panda is visited 2 time(s)
 alcatraz.escape(); // BREAKING NEWS, Sad Panda escaped the prison
 alcatraz.visit(); // Nobody is here anymore
+
+const alcatraz2 = prison('Sad Panda');
+
+alcatraz2.visit(); // Sad Panda is visited 1 time(s)
+alcatraz2.visit(); // Sad Panda is visited 2 time(s)
+alcatraz2.escape(); // BREAKING NEWS, Sad Panda escaped the prison
+alcatraz2.visit(); // Nobody is here anymore
