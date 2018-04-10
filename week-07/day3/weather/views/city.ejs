@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather report</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="/static/city.css">
+  </head>
+  <header>
+    <h1><%= chosenCity%>
+    </h1>
+  </header>
+  <body>
+    <main>
+      <% forecasts[cityIndex].weather.forEach(e => {%>
+      <section>
+          <img src="/static/img/<%= e.icon %>.png" alt="Cloudy weather">
+            <p><%= e.message %></p>
+          <h3><%= e.temp %>°C</h3>
+      </section>
+      <%})%>
+    </main>
+    <a href="http://localhost:3000/">
+      <button type="button" name="button">
+        Back
+      </button>
+    </a>
+  </body>
+</html>

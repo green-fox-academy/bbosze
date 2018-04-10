@@ -1,0 +1,11 @@
+body {
+  background: grey;
+  font-family: Arial;
+  margin-left: 200px;
+  font-size: 20px;
+}
+
+
+li:nth-child(2) {
+  color: red;
+}

@@ -13,9 +13,6 @@ const cocktails = [
 ];
 
 const alcoholList = ['gin', 'vodka', 'rum', 'tequila'];
-
-
-
 app.set('view engine', 'ejs');
 app.use('/static', express.static('static'));
 app.use('/img', express.static('img'));
@@ -27,19 +24,17 @@ app.get('/', (req, res) => {
   if (req.query.alcohol !== undefined) {
     cocktailList = cocktails.filter((e) => (
       e.contains.indexOf(req.query.alcohol) !== -1
-    ))
-  }
-  console.log(cocktailList);
+  ))}
   if (req.query.name !== undefined) {
     name = req.query.name;
   }
-
   res.render('home', {
     name,
     alcoholList: alcoholList,
     cocktails: cocktailList,
   })
 });
+
 
 
 app.listen(PORT, () => {

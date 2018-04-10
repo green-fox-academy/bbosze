@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Weather report</title>
+    <link href="https://fonts.googleapis.com/css?family=Lato:400,900" rel="stylesheet">
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <header>
+    <h1>This is the weather report for today</h1>
+  </header>
+  <body>
+    <main>
+      <% oneDayForecast.forEach((e, i) => { %>
+      <a href="?city=<%= oneDayForecast[i][0]; %>">
+      <section>
+        <div class="container">
+          <div class="location">
+            <h2>
+              <%= oneDayForecast[i][0]; %>
+              </h2>
+            <p>
+              <%= oneDayForecast[i][1]; %>
+            </p>
+          </div>
+          <h3>
+            <%= oneDayForecast[i][2]; %>°C
+          </h3>
+          <img src="https:<%= oneDayForecast[i][3]%>" alt="Cloudy weather">
+        </div>
+      </section>
+      <a>
+      <%})%>
+    </main>
+  </body>
+</html>
