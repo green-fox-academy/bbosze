@@ -37,6 +37,7 @@ body {
   margin-top: 10px;
   text-align: center;
   line-height: 200%;
+  color: grey; 
 }
 
 .elevator div.active {

@@ -18,5 +18,3 @@ xhr.onload = () => {
   })
 };
 xhr.send();
-
-// images.original

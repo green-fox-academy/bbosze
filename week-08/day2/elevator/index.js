@@ -6,7 +6,6 @@ let removePeopleBtn = document.querySelector('button[name="button4"]')
 let currentFloorIndex = 0;
 let peopelInTheElevator = 0;
 
-
 //CREATING STARTING POSITION
 for (let i = 0; i < 9; i++) {
   let newFloor = document.createElement('div');
