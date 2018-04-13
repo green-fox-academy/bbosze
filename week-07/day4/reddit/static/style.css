@@ -1,11 +1,118 @@
-body {
-  background: grey;
-  font-family: Arial;
-  margin-left: 200px;
-  font-size: 20px;
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,500');
+
+* {
+  margin: 0;
+  padding; 0;
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  height: 240px;
+  background-image: url(/static/imgs/header.png);
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  position: absolute;
+  top: 10px;
+}
+
+header h1 {
+  color: #fff;
+  position: absolute;
+  left: 35%;
+  font-size: 100px;
+  font-weight: 100;
+  letter-spacing: .9rem;
+  text-transform: uppercase;
+}
+
+.articlecontainer {
+  display: flex;
+}
+
+main {
+  background: #eee;
+  padding: 2% 1% 2% 1%;
+}
+
+section {
+  background: #eee;
+  flex: 2.8;
+}
+
+aside {
+  flex: 1.2;
+  height: 100px;
+  margin-left: 1%;
+
+}
+
+article {
+  display: flex;
+  width: 96%;
+  background-color: #fff;
+  margin-bottom: 1px;
+  padding: 20px;
+}
+
+.submit {
+  width: 100%;
+  outline: none;
+  border: none;
+  font-size: 25px;
+  background: #4aa3df;
+  color: #fff;
+  padding: 10px;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+  cursor: pointer;
 }
 
 
-li:nth-child(2) {
-  color: red;
+.votecontainer button {
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.votecontainer p {
+  text-align: center;
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+.contentcontainer {
+  margin-left: 30px;
+}
+
+.contentcontainer a {
+  text-decoration: none;
+  color: #4aa3df;
+  font-weight: 500;
+
+}
+
+.about-head {
+  background: #fbfbfb;
+  padding: 10px;
+}
+
+.about-body {
+  background: #f5f5f5;
+  padding: 20px;
+  padding-bottom: 30px;
+}
+
+.about-body h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.about-body ul li {
+  margin-bottom: 10px;
+}
+
+ul {
+  padding: 10px;
 }

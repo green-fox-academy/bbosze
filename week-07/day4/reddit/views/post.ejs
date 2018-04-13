@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>My beautiful reddit site</title>
+    <link rel="stylesheet" href="/static/poststyle.css">
+  </head>
+  <body>
+    <header onclick="window.location.href='http://localhost:3000/posts'">
+      <img src="/static/imgs/astronaut.png" alt="">
+      <h1>s p a c e</h1>
+    </header>
+    <main>
+      <form>
+        <div class="postcontainer">
+          <label><span>*</span>title</label>
+          <textarea id="title" type="text" required></textarea>
+          <label><span>*</span>URL</label>
+          <input id="url" type="email" required>
+        </div>
+        <button id="submitbutton" type="submit">
+          submit a new post
+        </button>
+        <p class="success"></p>
+      </form>
+    </main>
+    <script type="text/javascript" src="/static/submitscript.js">
+    </script>
+  </body>
+</html>

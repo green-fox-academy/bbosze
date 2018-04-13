@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300,700');
+
+* {
+  margin: 0;
+  padding; 0;
+  font-family: 'Lato', sans-serif;
+  font-size: 16px;
+}
+
+html, body {
+  height: 100%;
+  background: #eee;
+}
+
+header {
+  height: 240px;
+  background-image: url(/static/imgs/header.png);
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+
+header img {
+  position: absolute;
+  top: 10px;
+}
+
+header h1 {
+  color: #fff;
+  position: absolute;
+  left: 35%;
+  font-size: 100px;
+  font-weight: 100;
+  letter-spacing: .9rem;
+  text-transform: uppercase;
+}
+
+
+main {
+  background: #eee;
+  padding: 2% 1% 0 1%;
+}
+
+
+button {
+  width: 30%;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 25px;
+  background: #4aa3df;
+  padding: 10px;
+  text-transform: uppercase;
+  margin-top: 20px;
+  color: #fff;
+}
+
+.postcontainer {
+  width: 60%;
+  height: 200px;
+  background: #fff;
+  padding: 30px;
+}
+
+textarea, input  {
+  width: 100%;
+  height: 70%;
+  outline: none;
+  background: #eee;
+  border: none;
+  resize: none;
+}
+
+input {
+  height: 10%;
+}
+
+label span {
+  color: red;
+}
+
+.success {
+  text-align: center;
+  color: red;
+  font-weight: 700;
+}

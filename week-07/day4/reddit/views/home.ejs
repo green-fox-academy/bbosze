@@ -2,16 +2,73 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>Reddit project</title>
+    <title>My beautiful reddit site</title>
     <link rel="stylesheet" href="/static/style.css">
-    <link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300i,400,700" rel="stylesheet">
   </head>
   <body>
-    <% rows.forEach((e) => { %>
-      <ul>
-        <li><%= e.id %>.</li>
-        <li><%= e.title %></li>
-      <li><%= e.url %></li></ul>
-    <% }) %>
+    <header>
+      <img src="/static/imgs/astronaut.png" alt="">
+      <h1>s p a c e</h1>
+    </header>
+    <main>
+      <section class="articlecontainer">
+        <section>
+          <% rows.forEach((e) => { %>
+          <article>
+            <div class="votecontainer">
+              <button type="button" class="upvote" id="<%= e.id%>">
+                <img src="/static/imgs/upvote.png" alt="" width="28px">
+              </button>
+              <p class="votenumber">
+              <%= e.score %>
+              <p/>
+              <button type="button" class="downvote" id="<%=e.id%>">
+                <img src="/static/imgs/downvote.png" alt="" width="28px">
+              </button>
+            </div>
+            <div class="contentcontainer">
+              <h2>
+              <%= e.title %>
+              </h2>
+              <a href="
+              <%= e.url %>
+              " target="_blank">
+              <%= e.url %>
+              </a>
+              <p>
+              <%= e.timestamp%>
+              </p>
+              <p>Post id:
+              <%= e.id %>
+              .
+              </p>
+            </div>
+          </article>
+          <% }) %></%>
+        </section>
+      </section>
+      <aside>
+        <button class="submit" onclick="window.location.href='http://localhost:3000/newpost'">
+          submit a new post
+        </button>
+        <section class="about">
+          <div class="about-head">
+          <h2>ABOUT r/space</h2>
+          </div>
+          <div class="about-body">
+            <h3>Share and discuss informative content on:</h3>
+            <ul>
+              <li>Spaceships</li>
+              <li>Aliens</li>
+              <li>Astronauts</li>
+              <li>Planets</li>
+              <li>UFOS</li>
+              <li>GOD</li>
+            </ul>
+          </div>
+        </section>
+      </aside>
+    </main>
+    <script type="text/javascript" src="/static/homescript.js"></script>
   </body>
 </html>

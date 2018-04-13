@@ -14,7 +14,6 @@ const conn = mysql.createConnection({
   database: 'reddit'
 });
 
-
 app.get('/posts', function(req, res) {
   conn.query('SELECT * FROM posts;', (err, rows) => {
     if (err) {
@@ -44,7 +43,38 @@ app.post('/posts', (req, res) => {
   });
 });
 
+app.get('/newpost', function(req, res) {
+  res.render('post', {
+  });
+});
 
+app.put('/posts/:id/upvote', (req, res) => {
+  conn.query(`UPDATE posts SET score = score + 1 WHERE id = ${req.params.id};`, (err, result) => {
+    if (err) {
+      console.log(err.toString());
+      res.status(500).send('Database error');
+      return;
+    }
+    res.json({
+      message: 'OK',
+    });
+  }
+);
+});
+
+app.put('/posts/:id/downvote', (req, res) => {
+  conn.query(`UPDATE posts SET score = score - 1 WHERE id = ${req.params.id};`, (err, result) => {
+    if (err) {
+      console.log(err.toString());
+      res.status(500).send('Database error');
+      return;
+    }
+    res.json({
+      message: 'OK',
+    });
+  }
+);
+});
 
 
 app.listen(PORT, () => {
