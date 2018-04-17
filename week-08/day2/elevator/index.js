@@ -13,6 +13,8 @@ for (let i = 0; i < 9; i++) {
 }
 
 let floors = document.querySelectorAll('.elevator div')
+
+
 let activeFloor = document.querySelector('.active');
 activeFloor.innerText = peopelInTheElevator;
 

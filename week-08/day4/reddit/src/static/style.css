@@ -1,0 +1,71 @@
+@import url('https://fonts.googleapis.com/css?family=Lato:100,300');
+
+* {
+  margin: 0;
+  padding; 0;
+  font-family: 'Lato', sans-serif;
+}
+
+header {
+  height: 240px;
+  background-image: url(/Users/Balazs/dev/greenfox/bbosze/week-08/day4/reddit/src/imgs/header.png);
+  display: flex;
+  align-items: center;
+}
+
+header img {
+  position: absolute;
+  top: 10px;
+}
+
+header h1 {
+  color: #fff;
+  position: absolute;
+  left: 35%;
+  font-size: 100px;
+  font-weight: 100;
+  letter-spacing: .9rem;
+  text-transform: uppercase;
+}
+
+main {
+  background: #eee;
+  display: flex;
+  justify-content: space-between;
+  padding: 2% 1% 2% 1%;
+}
+
+section {
+  width: 69%;
+  background: #eee;
+}
+
+aside {
+  width: 30%;
+  background: #fff;
+}
+
+article {
+  display: flex;
+  width: 96%;
+  background-color: #fff;
+  margin-bottom: 1px;
+  padding: 20px;
+}
+
+button {
+  outline: none;
+  border: none;
+}
+
+.votecontainer p {
+  text-align: center;
+}
+
+.contentcontainer {
+  margin-left: 30px;
+}
+
+.contentcontainer a {
+  text-decoration: none;
+}

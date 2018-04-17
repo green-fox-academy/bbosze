@@ -15,7 +15,7 @@ const conn = mysql.createConnection({
 });
 
 app.get('/posts', function(req, res) {
-  conn.query('SELECT * FROM posts;', (err, rows) => {
+  conn.query('SELECT * FROM posts  ORDER BY id desc;', (err, rows) => {
     if (err) {
       console.log(err.toString());
       res.satus(500).send('Database error');

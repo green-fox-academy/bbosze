@@ -83,6 +83,23 @@ article {
   line-height: 1.5;
 }
 
+
+.upvote img {
+  content: url(/static/imgs/upvoted.png);
+}
+
+.disabled img {
+  content: url(/static/imgs/upvote.png);
+}
+
+.downvote img {
+  content: url(/static/imgs/downvote.png);
+}
+
+.enabled img {
+  content: url(/static/imgs/downvoted.png);
+}
+
 .contentcontainer {
   margin-left: 30px;
 }

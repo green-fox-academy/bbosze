@@ -103,7 +103,7 @@ for (let i: number = 1; i <= lineCount; i++) {
 */
 
 //PERFECT DIAMOND!
-/*
+
 let lineCount: number = 10;
 let tree: string = '*';
 let space: string = ' ';
@@ -165,4 +165,3 @@ if (lineCount % 2 === 0) {
     console.log(space + tree)
        }
 }
-*/
