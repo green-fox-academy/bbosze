@@ -39,7 +39,7 @@ test('rocket/fill endpoint with basic data', (t) => {
   });
 });
 
-test('rocket/fill endpoint with basic data', (t) => {
+test('rocket/fill endpoint with full ammo', (t) => {
   request(app)
   .get('/rocket/fill?caliber=.50&amount=12500')
   .expect(200)
@@ -47,8 +47,22 @@ test('rocket/fill endpoint with basic data', (t) => {
   .expect({
       "received": ".50",
       "amount": "12500",
-      "shipstatus": "40%",
+      "shipstatus": "full",
       "ready": true
+  })
+  .end((err, res) => {
+      t.error(err,);
+      t.end();
+  });
+});
+
+test('rocket/fill endpoint with NaN data', (t) => {
+  request(app)
+  .get('/rocket/fill?caliber=.50&amount=dasda')
+  .expect(200)
+  .expect('Content-Type', /json/)
+  .expect({
+    "error": "No ammo!"
   })
   .end((err, res) => {
       t.error(err,);
