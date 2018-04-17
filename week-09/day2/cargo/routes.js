@@ -9,7 +9,6 @@ let ammo = {
   "ready": false
 }
 
-
 app.get('/rocket', (req, res) => {
     res.json({
     "caliber25": ammo.caliber25,
@@ -24,12 +23,27 @@ app.get('/rocket/fill', (req, res) => {
   const data = req.query;
   let caliber = req.query.caliber;
   if(!isNaN(parseInt(req.query.amount)) && !isNaN(parseFloat(req.query.caliber)) && parseInt(req.query.amount) < 12500) {
-    res.json({
-      "received": data.caliber,
-      "amount": parseInt(data.amount),
-      "shipstatus": `${data.amount / 12500 * 100}%`,
-      "ready": false
-    });
+    if (ammo.caliber25 + ammo.caliber30 + ammo.caliber50 < 12500) {
+      switch (parseFloat(req.query.caliber)) {
+        case 0.25:
+          ammo.caliber25 += parseInt(req.query.amount);
+          break;
+        case 0.3:
+          ammo.caliber30 += parseInt(req.query.amount);
+          break;
+        case 0.5:
+          ammo.caliber50 += parseInt(req.query.amount);
+          break
+        default:
+          console.log('error');
+      }
+      res.json({
+        "received": data.caliber,
+        "amount": parseInt(data.amount),
+        "shipstatus": `${data.amount / 12500 * 100}%`,
+        "ready": false
+      });
+    }
   }
   else if (!isNaN(parseInt(req.query.amount)) && !isNaN(parseFloat(req.query.caliber)) && parseInt(req.query.amount) === 12500) {
     res.json({

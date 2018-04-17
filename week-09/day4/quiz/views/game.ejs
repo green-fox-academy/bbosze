@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Hello</title>
+  </head>
+  <body>
+    <% let random = Math.floor(Math.random() * 40) %>
+    <%= random %>
+    <%= rows[random].question %>
+    <% rows.forEach((e) => {%>
+      <%= e.answer %>
+    <% }); %>
+  </body>
+</html>
