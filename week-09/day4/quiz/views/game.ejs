@@ -2,14 +2,20 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" href="/static/style.css">
     <title>Hello</title>
   </head>
   <body>
-    <% let random = Math.floor(Math.random() * 40) %>
-    <%= random %>
-    <%= rows[random].question %>
-    <% rows.forEach((e) => {%>
-      <%= e.answer %>
-    <% }); %>
+    <main>
+      <h1>The big quiz game</h1>
+      <h3>Score: <span>0</span></h3>
+      <section class="container">
+      </section>
+      <p>
+        <a href="#" class="manage">Manage questions</a>
+      </p>
+    </main>
+    <script src="/static/script.js">
+    </script>
   </body>
 </html>

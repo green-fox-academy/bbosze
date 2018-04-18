@@ -29,6 +29,18 @@ app.get('/game', (req, res) => {
   });
 });
 
+app.get('/games', (req, res) => {
+  conn.query(`SELECT * FROM answers INNER JOIN questions ON questions.id = answers.question_id;`, (err, rows) => {
+    if (err) {
+      console.log(err.toString()); // eslint-disable-line
+      res.status(500).send('Database error');
+      return;
+    }
+    res.json({
+      rows,
+    });
+  });
+});
 
 app.listen(PORT, () => {
   console.log(`App is running on ${PORT}`); // eslint-disable-line

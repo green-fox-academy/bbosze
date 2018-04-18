@@ -6,7 +6,6 @@ xhr.open('GET', `https://api.nytimes.com/svc/search/v2/articlesearch.json?api-ke
 `);
 xhr.onload = () => {
   let dataFromNyt = JSON.parse(xhr.responseText);
-  console.log(dataFromNyt);
   dataFromNyt.response.docs.forEach((e) => {
     let container = document.createElement('div');
     article.appendChild(container);
