@@ -1,0 +1,72 @@
+body{
+  color: #fff;
+  font-family: 'Nunito Semibold';
+  text-align: center;
+}
+#content{
+  display: grid;
+  /*grid-template-columns: 30% 20% 50%;*/
+  grid-template-columns: repeat(6, 1fr);
+  /* grid-template-columns: 1fr 4fr 1fr; */
+  grid-template-rows: repeat(4, minmax(150px, auto));
+  /* grid-auto-rows: minmax(200px, auto); */
+  width: 960px;
+  margin: 0 auto;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+}
+
+.one {
+  /* grid-column-start: 1;
+  grid-column-end: 3; */
+  grid-column: 1 / 3;
+  align-self: start;
+  justify-self: start;
+}
+.two {
+  grid-column: 3 / 7;
+}
+.three {
+  grid-column: 1 / 4;
+  grid-row: 2 / 4;
+  padding: 20px;;
+}
+.four {
+  grid-column: 4 / 7;
+  grid-row: 2 / 4;
+}
+.five {
+  grid-column: 3 / 7;
+}
+.six {
+  grid-row: 4;
+  grid-column: 1 / 3;
+}
+
+.nested {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 10px;
+  grid-column: span 3;
+}
+
+.nested p {
+  border: 1px solid #fff;
+  padding: 20px;
+  margin: 0;
+}
+
+#content div{
+  background: #3bbced;
+  padding: 30px;
+}
+#content div:nth-child(even){
+  background: #777;
+  padding: 30px;
+}
+
+.innerbox {
+  width: 100%;
+  height: 100%;
+  background: #FED541;
+}
